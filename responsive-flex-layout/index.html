@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive flex layout</title>
+    <style>
+        .container{
+            height: 100vh;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .left,.right{
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            /* border: 1px salmon solid; */
+        }
+        .left{
+            background-color: #cfd8dc;
+            width: 30%;
+        }
+        .right{
+            background-color: #f0f4c3;
+            width: 70%;
+        }
+        @media screen and (max-width:768px) {
+            .container{
+                flex-direction: column;
+            }
+            .left,.right{
+                width: 90%;
+            }
+            .left{
+                height: 30%;
+            }
+            .right{
+                height: 70%;
+            }
+            
+        }
+    </style>
 </head>
 <body>
+    
+    <div class="container">
+        <div class="left">
+           Left
+        </div>
+        <div class="right">
+            Right
+        </div>
+    </div>
     
 </body>
 </html>
